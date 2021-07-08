@@ -1,5 +1,5 @@
 <template>
-  <v-main fluid>
+  <v-main>
     <v-container class="ma-0 pa-0 black" fluid>
       <v-row class="ma-0 pa-0 black" no-gutters>
         <v-col class="ma-0 pa-0" cols="12" lg="3" rounded="sm">
@@ -49,6 +49,7 @@
           cols="12"
           lg="6"
           rounded="sm"
+          @mouseover="onMouseOver(5)"
         >
           <v-img
             v-bind:src="require('../assets/' + fname_img)"
@@ -106,7 +107,7 @@
 export default {
   data: function() {
     return {
-      fname_img: "main_3d_map.png",
+      fname_img: "3d_map_all.png",
     };
   },
   methods: {
@@ -114,16 +115,14 @@ export default {
     onMouseOver(key) {
       if (key === 1) {
         this.fname_img = "3d_map_hush.png";
-        //alert("MouseOver!");
       } else if (key === 2) {
         this.fname_img = "3d_map_eng.png";
-        //alert("MouseOver!");
       } else if (key === 3) {
         this.fname_img = "3d_map_tower.png";
-        //alert("MouseOver!");
       } else if (key === 4) {
         this.fname_img = "3d_map_fire.png";
-        //alert("MouseOver!");
+      } else if (key === 5) {
+        this.fname_img = "3d_map_all.png";
       }
     },
   },
