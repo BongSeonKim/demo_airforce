@@ -1,23 +1,23 @@
 <template>
   <v-app-bar
     app
-    class="d-flex justify-start"
+    class="d-flex justify-space-between"
     color="black"
     height="100"
     width="100vw"
   >
     <v-img
-      src="@/assets/logo_airforce.jpg"
+      src="@/assets/logo_airforce.png"
       :aspect-ratio="16 / 9"
-      width="290"
-      height="100"
+      width="380"
+      height="80"
     ></v-img>
     <v-btn-toggle tile group>
       <v-btn @click="routeContent('main')">
         Home
       </v-btn>
       <v-btn @click="routeContent('dt')">
-        Digital Twin
+        3D MAP
       </v-btn>
       <v-btn @click="routeContent('iot')">
         IoT감지기현황

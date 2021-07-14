@@ -6,8 +6,10 @@
           <v-row class="ma-0 pa-0" no-gutters>
             <v-col class="ma-0 pa-0" cols="12" lg="12" rounded="sm">
               <v-card
-                @mouseover="onMouseOver(1)"
-                class="ma-0 pa-0"
+                id="hush"
+                @mouseover="onMouseOver(1, $event)"
+                @mouseout="onMouseOut()"
+                :class="[this.card_gubun === 1 ? strClass_over : strClass]"
                 tile
                 style="height: 42vh; width: 100vw"
               >
@@ -15,7 +17,7 @@
                   >허쉬하우스
                 </v-card-title>
                 <iframe
-                  src="http://localhost:3000/d/P-2cuek7z/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -26,8 +28,10 @@
           <v-row class="ma-0 pa-0" no-gutters>
             <v-col class="ma-0 pa-0" cols="12" lg="12" rounded="sm">
               <v-card
+                name="eng"
                 @mouseover="onMouseOver(2)"
-                class="ma-0 pa-0"
+                @mouseout="onMouseOut()"
+                :class="[this.card_gubun === 2 ? strClass_over : strClass]"
                 tile
                 style="height: 42vh; width: 100vw"
               >
@@ -35,7 +39,7 @@
                   >공병대대
                 </v-card-title>
                 <iframe
-                  src="http://localhost:3000/d/qQC49ek7k/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -50,6 +54,7 @@
           lg="6"
           rounded="sm"
           @mouseover="onMouseOver(5)"
+          @mouseout="onMouseOut()"
         >
           <v-img
             v-bind:src="require('../assets/' + fname_img)"
@@ -61,8 +66,10 @@
           <v-row class="ma-0 pa-0" no-gutters>
             <v-col class="ma-0 pa-0" cols="12" lg="12" rounded="sm">
               <v-card
+                name="tower"
                 @mouseover="onMouseOver(3)"
-                class="ma-0 pa-0"
+                @mouseout="onMouseOut()"
+                :class="[this.card_gubun === 3 ? strClass_over : strClass]"
                 tile
                 style="height: 42vh; width: 100vw"
               >
@@ -70,7 +77,7 @@
                   >관제탑
                 </v-card-title>
                 <iframe
-                  src="http://localhost:3000/d/P-2cuek7z/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -81,8 +88,10 @@
           <v-row class="ma-0 pa-0" no-gutters>
             <v-col class="ma-0 pa-0" cols="12" lg="12" rounded="sm">
               <v-card
+                name="fire"
                 @mouseover="onMouseOver(4)"
-                class="ma-0 pa-0"
+                @mouseout="onMouseOut()"
+                :class="[this.card_gubun === 4 ? strClass_over : strClass]"
                 tile
                 style="height: 42vh; width: 100vw"
               >
@@ -90,7 +99,7 @@
                   >소방중대
                 </v-card-title>
                 <iframe
-                  src="http://localhost:3000/d/qQC49ek7k/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -108,6 +117,9 @@ export default {
   data: function() {
     return {
       fname_img: "3d_map_all.png",
+      card_gubun: 0,
+      strClass: "ma-0 pa-0",
+      strClass_over: "ma-0 pa-0 light-blue",
     };
   },
   methods: {
@@ -115,15 +127,24 @@ export default {
     onMouseOver(key) {
       if (key === 1) {
         this.fname_img = "3d_map_hush.png";
+        this.card_gubun = key;
       } else if (key === 2) {
         this.fname_img = "3d_map_eng.png";
+        this.card_gubun = key;
       } else if (key === 3) {
         this.fname_img = "3d_map_tower.png";
+        this.card_gubun = key;
       } else if (key === 4) {
         this.fname_img = "3d_map_fire.png";
+        this.card_gubun = key;
       } else if (key === 5) {
         this.fname_img = "3d_map_all.png";
+        this.card_gubun = key;
       }
+    },
+
+    onMouseOut() {
+      this.card_gubun = 0;
     },
   },
 };
