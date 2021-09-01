@@ -16,15 +16,15 @@
       <v-btn @click="routeContent('main')">
         Home
       </v-btn>
-      <v-btn @click="routeContent('dt')">
+      <!-- <v-btn @click="routeContent('dt')">
         3D MAP
-      </v-btn>
+      </v-btn> -->
       <v-btn @click="routeContent('iot')">
         IoT감지기현황
       </v-btn>
-      <v-btn @click="routeContent('fd')">
+      <!-- <v-btn @click="routeContent('fd')">
         영상분석현황
-      </v-btn>
+      </v-btn> -->
     </v-btn-toggle>
     <!-- <v-spacer></v-spacer> -->
   </v-app-bar>
