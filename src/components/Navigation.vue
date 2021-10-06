@@ -13,13 +13,13 @@
       height="80"
     ></v-img>
     <v-btn-toggle tile group>
-      <v-btn @click="routeContent('main')">
-        Home
+      <v-btn x-large @click="routeContent('dt')">
+        디지털트윈
       </v-btn>
       <!-- <v-btn @click="routeContent('dt')">
         3D MAP
       </v-btn> -->
-      <v-btn @click="routeContent('iot')">
+      <v-btn x-large @click="routeContent('iot')">
         IoT감지기현황
       </v-btn>
       <!-- <v-btn @click="routeContent('fd')">
@@ -34,7 +34,8 @@ export default {
   methods: {
     routeContent(key) {
       if (key === "main") {
-        this.$emit("route", "main");
+        // this.$emit("route", "main");
+        this.$emit("route", "dt");
       } else if (key === "dt") {
         this.$emit("route", "dt");
       } else if (key === "iot") {

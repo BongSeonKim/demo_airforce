@@ -11,8 +11,8 @@
 </template>
 <script>
 import navig from "@/components/Navigation.vue";
-import Content from "@/views/Content.vue";
-//import Digitaltwin from "@/views/DigitalTwin.vue";
+//import Content from "@/views/Content.vue";
+import Digitaltwin from "@/views/DigitalTwin.vue";
 import IoT from "@/views/IoT.vue";
 //import FireDetection from "@/views/FireDetection.vue";
 import mqtt from "mqtt";
@@ -21,8 +21,8 @@ export default {
   name: "App",
   components: {
     navig: navig,
-    Content,
-    //Digitaltwin,
+    //Content,
+    Digitaltwin,
     IoT,
     //FireDetection,
     mqtt,
@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      routePath: Content,
+      routePath: Digitaltwin,
 
       //for mqtt
       connection: {
@@ -70,9 +70,9 @@ export default {
   methods: {
     routeContent(key) {
       if (key === "main") {
-        this.routePath = Content;
-        // } else if (key === "dt") {
-        //   this.routePath = Digitaltwin;
+        this.routePath = Digitaltwin;
+      } else if (key === "dt") {
+        this.routePath = Digitaltwin;
       } else if (key === "iot") {
         this.routePath = IoT;
         // } else if (key === "fd") {

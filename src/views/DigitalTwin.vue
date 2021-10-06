@@ -1,13 +1,16 @@
 <template>
   <v-main>
-    <v-container class="ma-0 pa-0 black" fluid>
-      <h1>DigitalTwin</h1>
-      <!-- <iframe
-        src="http://localhost:3000/d/RrGLp3R7z/test_airforce?orgId=1&refresh=5s&kiosk"
+    <v-container
+      class="ma-0 pa-0 black"
+      fluid
+      style="height: 100vh; width: 100vw"
+    >
+      <iframe
+        src="http://file.rozetatech.com:8090/index"
         width="100%"
         height="100%"
         frameborder="0"
-      ></iframe> -->
+      ></iframe>
     </v-container>
   </v-main>
 </template>
