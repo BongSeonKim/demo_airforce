@@ -17,7 +17,7 @@
                   >허쉬하우스
                 </v-card-title>
                 <iframe
-                  src="https://file.rozetatech.com:3000/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/grafana/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -39,7 +39,7 @@
                   >공병대대
                 </v-card-title>
                 <iframe
-                  src="https://file.rozetatech.com:3000/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/grafana/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -77,7 +77,7 @@
                   >관제탑
                 </v-card-title>
                 <iframe
-                  src="https://file.rozetatech.com:3000/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/grafana/d/9hB_ffm7k/heoswihauseu_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -99,7 +99,7 @@
                   >소방중대
                 </v-card-title>
                 <iframe
-                  src="https://file.rozetatech.com:3000/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
+                  src="http://file.rozetatech.com:3000/grafana/d/rZo9BBmnz/gongbyeongdaedae_main?orgId=1&refresh=5s&kiosk"
                   width="100%"
                   height="100%"
                   frameborder="0"
