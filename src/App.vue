@@ -43,7 +43,7 @@ import navig from "@/components/Navigation.vue";
 import Digitaltwin from "@/views/DigitalTwin.vue";
 import IoT from "@/views/IoT.vue";
 //import FireDetection from "@/views/FireDetection.vue";
-import mqtt from "mqtt";
+//import mqtt from "mqtt";
 
 export default {
   name: "App",
