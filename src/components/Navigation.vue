@@ -3,7 +3,7 @@
     app
     class="d-flex justify-space-between"
     color="black"
-    height="100"
+    height="80"
     width="100vw"
   >
     <v-img

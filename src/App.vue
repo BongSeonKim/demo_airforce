@@ -6,7 +6,35 @@
     </keep-alive>
     <!-- <router-view></router-view> -->
     <!-- <Contentlayout></Contentlayout> -->
-    <div class="black"></div>
+    <!--<div class="black"></div>-->
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
+      <v-card>
+        <v-toolbar dark color="black">
+          <v-btn icon dark @click="dialog = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>IoT 감지기 현황</v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+        <v-container
+          class="ma-0 pa-0 black"
+          fluid
+          style="height: 100vh; width: 100vw"
+        >
+          <iframe
+            src="http://file.rozetatech.com:3000/grafana/d/RrGLp3R7z/test_airforce?orgId=1&refresh=5s&kiosk"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+        </v-container>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 <script>
@@ -25,7 +53,7 @@ export default {
     Digitaltwin,
     IoT,
     //FireDetection,
-    mqtt,
+    //mqtt,
     //Contentlayout,
   },
   data() {
@@ -65,8 +93,10 @@ export default {
         connected: false,
       },
       subscribeSuccess: false,
+
+      dialog: false,
     };
-  },
+  }, //end data()
   methods: {
     routeContent(key) {
       if (key === "main") {
@@ -74,7 +104,8 @@ export default {
       } else if (key === "dt") {
         this.routePath = Digitaltwin;
       } else if (key === "iot") {
-        this.routePath = IoT;
+        this.dialog = true;
+        // this.routePath = IoT;
         // } else if (key === "fd") {
         //   this.routePath = FireDetection;
       }
@@ -154,4 +185,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+</style>
