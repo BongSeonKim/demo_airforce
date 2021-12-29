@@ -6,7 +6,7 @@
       style="height: 100%; width: 100%"
     >
       <iframe
-        src="http://file.rozetatech.com:8090/index"
+        src="http://10.20.21.19:8090/index"
         width="100%"
         height="100%"
         frameborder="0"

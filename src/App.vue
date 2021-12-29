@@ -18,7 +18,7 @@
           <v-btn icon dark @click="dialog = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
-          <v-toolbar-title>IoT 감지기 현황</v-toolbar-title>
+          <v-toolbar-title>대시보드</v-toolbar-title>
           <v-spacer></v-spacer>
         </v-toolbar>
         <v-container
@@ -27,7 +27,7 @@
           style="height: 100vh; width: 100vw"
         >
           <iframe
-            src="http://file.rozetatech.com:3000/grafana/d/RrGLp3R7z/test_airforce?orgId=1&refresh=5s&kiosk"
+            src="http://10.20.21.19:3000/grafana/d/9wVIxdpnz/airforce?orgId=1&refresh=5s&kiosk"
             width="100%"
             height="100%"
             frameborder="0"

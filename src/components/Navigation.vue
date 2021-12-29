@@ -20,7 +20,7 @@
         3D MAP
       </v-btn> -->
       <v-btn x-large @click="routeContent('iot')">
-        IoT감지기현황
+        대시보드
       </v-btn>
       <!-- <v-btn @click="routeContent('fd')">
         영상분석현황
@@ -31,6 +31,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      items: [{ title: "종합현황" }, { title: "IoT 감지기 현황" }],
+    };
+  },
   methods: {
     routeContent(key) {
       if (key === "main") {
