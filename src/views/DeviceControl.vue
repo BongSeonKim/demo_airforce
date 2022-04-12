@@ -255,10 +255,7 @@ export default {
       };
       axios
         //.get("http://10.20.21.19:3000/api/device/extinguish", axiosConfig)
-        .get(
-          "http://file.rozetatech.com:3000/api/device/extinguish",
-          axiosConfig
-        )
+        .get("http://dt.rozetatech.com:3000/api/device/extinguish", axiosConfig)
         .then(function(response) {
           //console.log(response);
           if (response.status === 200) {
@@ -324,13 +321,13 @@ export default {
         headers: {
           "Content-Type": "application/json",
           //"Access-Control-Allow-Origin": "http://10.20.21.19:3000",
-          "Access-Control-Allow-Origin": "http://file.rozetatech.com:3000",
+          "Access-Control-Allow-Origin": "http://dt.rozetatech.com:3000",
         },
       };
       axios
         .post(
           //"http://10.20.21.19:3000/log/http_set_extinguish",
-          "http://file.rozetatech.com:3000/log/http_set_extinguish",
+          "http://dt.rozetatech.com:3000/log/http_set_extinguish",
           JSON.stringify(json_setinfo),
           axiosConfig
         )
