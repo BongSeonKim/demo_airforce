@@ -5,12 +5,23 @@
       fluid
       style="height: 100%; width: 100%"
     >
-      <iframe
+      <!-- <iframe
         src="http://10.20.21.19:8090/index"
         width="100%"
         height="100%"
         frameborder="0"
+      ></iframe> -->
+      <iframe
+        src="http://dt.rozetatech.com:8090/index"
+        width="100%"
+        height="100%"
+        frameborder="0"
       ></iframe>
+
+      <!-- <v-card height="80"><v-card-title></v-card-title></v-card>
+      <v-card width="100vw" height="100vh"
+        ><v-card-title color="white">DT</v-card-title></v-card
+      > -->
     </v-container>
   </v-main>
 </template>
